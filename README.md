@@ -2,6 +2,6 @@
 
 My Neovim configuration using built-in `vim.pack` plugin manager.
 
-![login](./screenshots/preview-1)
+![login](./screenshots/login.png)
 
-![editor](./screenshots/preview-2)
+![editor](./screenshots/editor.png)
