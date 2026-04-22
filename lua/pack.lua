@@ -13,7 +13,6 @@ vim.pack.add({
 	{ src = "https://github.com/saghen/blink.cmp", version = vim.version.range("1.*") },
 
 	{ src = "https://github.com/nvim-tree/nvim-web-devicons" },
-	{ src = "https://github.com/nvim-tree/nvim-tree.lua" },
 
 	{ src = "https://github.com/AlexvZyl/nordic.nvim" },
 	{ src = "https://github.com/catppuccin/nvim" },
@@ -21,10 +20,8 @@ vim.pack.add({
 	{ src = "https://github.com/rebelot/kanagawa.nvim" },
 	{ src = "https://github.com/folke/tokyonight.nvim" },
 	{ src = "https://github.com/Shatur/neovim-ayu" },
+	{ src = "https://github.com/nanotech/jellybeans.vim" },
 })
-
--- File Management
-require("plugins.nvim-tree")
 
 -- Completion
 require("plugins.blink-cmp")

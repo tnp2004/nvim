@@ -1,4 +1,11 @@
-require("fff").setup()
+require("fff").setup({
+  prompt_vim_mode = true,
+	lazy_sync = true,
+	debug = {
+		enabled = true,
+		show_scores = false,
+	},
+})
 
 vim.api.nvim_create_autocmd("PackChanged", {
 	callback = function(ev)
@@ -11,11 +18,3 @@ vim.api.nvim_create_autocmd("PackChanged", {
 		end
 	end,
 })
-
-vim.g.fff = {
-	lazy_sync = true,
-	debug = {
-		enabled = true,
-		show_scores = false,
-	},
-}
