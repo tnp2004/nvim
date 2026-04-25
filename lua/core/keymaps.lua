@@ -4,6 +4,7 @@ vim.g.mapleader = " "
 vim.keymap.set("n", "<Esc>", ":q<CR>", { noremap = true, silent = true })
 vim.keymap.set({ "n", "v" }, "H", "^", { desc = "move to start of line" })
 vim.keymap.set({ "n", "v" }, "L", "$", { desc = "move to end of line" })
+vim.keymap.set("t", "<Esc>", "<C-\\><C-n>", { desc = "exit insert mode on terminal" })
 
 -- [ Conform ]
 vim.keymap.set({ "n", "v" }, "<leader>fm", function()
@@ -33,15 +34,24 @@ vim.keymap.set("n", "<C-n>", function()
 		minifiles.open()
 	end
 end)
+vim.api.nvim_create_autocmd("User", {
+	callback = function()
+		local minifiles = require("mini.files")
+		vim.keymap.set("n", "<CR>", function(ev)
+			minifiles.go_in(ev)
+			minifiles.close()
+		end)
+	end,
+})
 -- starter
 vim.api.nvim_create_autocmd("User", {
 	pattern = "MiniStarterOpened",
 	callback = function(ev)
 		local ministarter = require("mini.starter")
-    -- delete move default key
+		-- delete move default key
 		vim.keymap.del("n", "<C-n>", { buffer = ev.buf })
 		vim.keymap.del("n", "<C-p>", { buffer = ev.buf })
-    -- use Ctrl + k/j to move instead
+		-- use Ctrl + k/j to move instead
 		vim.keymap.set("n", "<C-k>", function()
 			ministarter.update_current_item("prev")
 		end, { buffer = true })

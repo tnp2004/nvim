@@ -53,7 +53,7 @@ vim.opt.autowrite = false
 vim.opt.hidden = true
 vim.opt.errorbells = false
 vim.opt.backspace = "indent,eol,start"
-vim.opt.autochdir = false
+vim.opt.autochdir = true
 vim.opt.iskeyword:append("-")
 vim.opt.path:append("**")
 vim.opt.selection = "inclusive"
@@ -76,4 +76,4 @@ vim.opt.redrawtime = 10000
 vim.opt.maxmempattern = 20000
 
 vim.opt.confirm = true
-vim.opt.autocomplete = true
+vim.opt.autocomplete = false

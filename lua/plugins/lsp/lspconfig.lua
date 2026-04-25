@@ -85,6 +85,7 @@ vim.lsp.config("gopls", {
 		gopls = {
 			analyses = {
 				unusedparams = true,
+        ST1000 = false,
 			},
 			staticcheck = true,
 			gofumpt = true,
@@ -215,4 +216,5 @@ vim.lsp.enable({
 	"emmet_language_server",
 	"emmet_ls",
 	"tailwindcss",
+  "rust_analyzer",
 })

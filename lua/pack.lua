@@ -21,6 +21,16 @@ vim.pack.add({
 	{ src = "https://github.com/folke/tokyonight.nvim" },
 	{ src = "https://github.com/Shatur/neovim-ayu" },
 	{ src = "https://github.com/nanotech/jellybeans.vim" },
+	{ src = "https://github.com/rose-pine/neovim" },
+	{ src = "https://github.com/mrcjkb/rustaceanvim", version = vim.version.range("^9") },
+	{ src = "https://github.com/sainnhe/sonokai" },
+	{ src = "https://github.com/marko-cerovac/material.nvim" },
+	{ src = "https://github.com/sainnhe/gruvbox-material" },
+	{ src = "https://github.com/navarasu/onedark.nvim" },
+	{ src = "https://github.com/ribru17/bamboo.nvim" },
+	{ src = "https://github.com/smit4k/shale.nvim" },
+	{ src = "https://github.com/thesimonho/kanagawa-paper.nvim" },
+	{ src = "https://github.com/Mofiqul/vscode.nvim" },
 })
 
 -- Completion
