@@ -1,4 +1,9 @@
 require("kanagawa").setup({
+  colors = {
+    palette = {
+      waveAqua2 = "#dcd7ba"
+    },
+  },
 	overrides = function(colors)
 		local theme = colors.theme
 		return {

@@ -34,15 +34,6 @@ vim.keymap.set("n", "<C-n>", function()
 		minifiles.open()
 	end
 end)
-vim.api.nvim_create_autocmd("User", {
-	callback = function()
-		local minifiles = require("mini.files")
-		vim.keymap.set("n", "<CR>", function(ev)
-			minifiles.go_in(ev)
-			minifiles.close()
-		end)
-	end,
-})
 -- starter
 vim.api.nvim_create_autocmd("User", {
 	pattern = "MiniStarterOpened",

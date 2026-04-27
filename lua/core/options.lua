@@ -18,7 +18,7 @@ vim.opt.smartcase = true
 vim.opt.hlsearch = true
 vim.opt.incsearch = true
 
-vim.opt.signcolumn = 'yes'
+vim.opt.signcolumn = "yes"
 vim.opt.showmatch = true
 vim.opt.cmdheight = 1
 vim.opt.completeopt = "menuone,noinsert,noselect"
@@ -33,10 +33,8 @@ vim.opt.synmaxcol = 300
 vim.opt.fillchars = "eob: "
 
 local undodir = vim.fn.expand("~/.vim/undodir")
-if
-  vim.fn.isdirectory(undodir) == 0
-then
-  vim.fn.mkdir(undodir, "p")
+if vim.fn.isdirectory(undodir) == 0 then
+	vim.fn.mkdir(undodir, "p")
 end
 
 vim.opt.backup = false
@@ -53,7 +51,7 @@ vim.opt.autowrite = false
 vim.opt.hidden = true
 vim.opt.errorbells = false
 vim.opt.backspace = "indent,eol,start"
-vim.opt.autochdir = true
+vim.opt.autochdir = false
 vim.opt.iskeyword:append("-")
 vim.opt.path:append("**")
 vim.opt.selection = "inclusive"
@@ -70,7 +68,7 @@ vim.opt.splitbelow = true
 vim.opt.splitright = true
 
 vim.opt.wildmenu = true
-vim.opt.wildmode ="longest:full,full"
+vim.opt.wildmode = "longest:full,full"
 vim.opt.diffopt:append("linematch:60")
 vim.opt.redrawtime = 10000
 vim.opt.maxmempattern = 20000
