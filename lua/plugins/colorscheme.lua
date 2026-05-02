@@ -1,4 +1,5 @@
 require("kanagawa").setup({
+	transparent = true,
 	colors = {
 		palette = {
 			waveAqua2 = "#dcd7ba",
@@ -7,6 +8,10 @@ require("kanagawa").setup({
 	overrides = function(colors)
 		local theme = colors.theme
 		return {
+			NormalFloat = { bg = "none" },
+			FloatBorder = { bg = "none" },
+			FloatTitle = { bg = "none" },
+
 			-- Current line number
 			LineNr = { bg = theme.ui.bg },
 			SignColumn = { bg = theme.ui.bg },
