@@ -1,7 +1,7 @@
 vim.g.mapleader = " "
 
 -- [ Global ]
-vim.keymap.set("n", "<Esc>", ":q<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<Esc>", ":bd<CR>", { noremap = true, silent = true })
 vim.keymap.set({ "n", "v" }, "H", "^", { desc = "move to start of line" })
 vim.keymap.set({ "n", "v" }, "L", "$", { desc = "move to end of line" })
 vim.keymap.set("t", "<Esc>", "<C-\\><C-n>", { desc = "exit insert mode on terminal" })
