@@ -5,7 +5,6 @@ require("mini.surround").setup({})
 require("mini.indentscope").setup({})
 require("mini.pairs").setup({})
 require("mini.bufremove").setup({})
-require("mini.bufremove").setup({})
 require("mini.tabline").setup({})
 require("mini.diff").setup({})
 require("mini.git").setup({})
@@ -14,9 +13,34 @@ require("mini.files").setup({
 		go_in_plus = "<CR>",
 	},
 })
-require("mini.starter").setup({
+local starter = require("mini.starter")
+starter.setup({
 	header = require("ascii").nvimghost,
 	footer = "",
+	autoopen = true,
+	evaluate_single = true,
+	items = {
+		{
+			name = "f Find Files",
+			action = function()
+				vim.cmd("FFFFind")
+			end,
+			section = "Menu",
+		},
+		{
+			name = "c Config Neovim",
+			action = function()
+				vim.cmd("edit" .. vim.fn.stdpath("config"))
+			end,
+			section = "Menu",
+		},
+		{
+			name = "q Quit Neovim",
+			action = "qa",
+			section = "Menu",
+		},
+		starter.sections.recent_files(5, false),
+	},
 })
 require("mini.statusline").setup({
 	content = {

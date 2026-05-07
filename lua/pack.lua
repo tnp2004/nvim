@@ -8,9 +8,12 @@ vim.pack.add({
 	{ src = "https://github.com/mason-org/mason.nvim" },
 	{ src = "https://github.com/mason-org/mason-lspconfig.nvim" },
 	{ src = "https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim" },
+	{ src = "https://github.com/mrcjkb/rustaceanvim", version = vim.version.range("^9") },
 	{ src = "https://github.com/dmtrKovalenko/fff.nvim" },
 
 	{ src = "https://github.com/saghen/blink.cmp", version = vim.version.range("1.*") },
+
+	{ src = "https://github.com/folke/snacks.nvim" },
 
 	{ src = "https://github.com/nvim-tree/nvim-web-devicons" },
 
@@ -22,7 +25,6 @@ vim.pack.add({
 	{ src = "https://github.com/Shatur/neovim-ayu" },
 	{ src = "https://github.com/nanotech/jellybeans.vim" },
 	{ src = "https://github.com/rose-pine/neovim" },
-	{ src = "https://github.com/mrcjkb/rustaceanvim", version = vim.version.range("^9") },
 	{ src = "https://github.com/sainnhe/sonokai" },
 	{ src = "https://github.com/marko-cerovac/material.nvim" },
 	{ src = "https://github.com/sainnhe/gruvbox-material" },
@@ -48,4 +50,7 @@ require("plugins.lsp.lspconfig")
 require("plugins.treesitter")
 
 require("plugins.mini")
+require("plugins.snacks")
+
 require("plugins.colorscheme")
+require("plugins.nvim-web-devicons")
